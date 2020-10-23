@@ -1,6 +1,8 @@
 // 计算astar路径
 function astarCreate(star, end, graph) {
+    console.log('起点', star, end)
     var maps = new Graph(graph);
+    // console.log(maps)
     const s = star.clone()
     const e = end.clone()
     const sx = (s.x)
@@ -10,8 +12,8 @@ function astarCreate(star, end, graph) {
     console.log(sx, sy, ex, ey)
     var starPosition = maps.grid[sx][sy];
     var endPosition = maps.grid[ex][ey];
-    console.log(starPosition)
-    console.log(endPosition)
+    // console.log(starPosition)
+    // console.log(endPosition)
 
     var result = astar.search(maps, starPosition, endPosition);
     return result
